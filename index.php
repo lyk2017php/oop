@@ -1,14 +1,6 @@
 <?php
 
-class KuruTemizlemeci
-{
-	var $camasir;
-
-	function yika()
-	{
-		echo $this->camasir . " yıkandı<br>";
-	}
-}
+require_once "KuruTemizlemeci.php";
 
 $mahmut = new KuruTemizlemeci;
 $mahmut->camasir = "aşorman";

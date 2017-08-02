@@ -2,9 +2,9 @@
 
 class KuruTemizlemeci
 {
-	var $camasir;
+	public $camasir;
 
-	function temizle()
+	public function temizle()
 	{
 		$this->yika();
 		$this->kurula();
@@ -12,22 +12,22 @@ class KuruTemizlemeci
 		$this->paketle();
 	}
 
-	function yika()
+	private function yika()
 	{
 		echo $this->camasir . " yıkandı<br>";
 	}
 
-	function kurula()
+	private function kurula()
 	{
 		echo $this->camasir . " kurulandı<br>";
 	}
 
-	function utule()
+	private function utule()
 	{
 		echo $this->camasir . " utulendi<br>";
 	}
 
-	function paketle()
+	private function paketle()
 	{
 		echo $this->camasir . " paketlendi<br>";
 	}

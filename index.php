@@ -4,7 +4,7 @@ require_once "KuruTemizlemeci.php";
 
 $mahmut = new KuruTemizlemeci;
 $mahmut->camasir = "aşorman";
-$mahmut->kurula();
+// $mahmut->kurula(); // kurula() artık private olduğu için dışarıdan erişilemez
 
 $mahmut->camasir = "göynek";
 $mahmut->temizle();

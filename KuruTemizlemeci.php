@@ -4,7 +4,7 @@ class KuruTemizlemeci
 {
 	var $camasir;
 
-	function yika()
+	function temizle()
 	{
 		echo $this->camasir . " yıkandı<br>";
 	}

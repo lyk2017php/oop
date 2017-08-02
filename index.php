@@ -4,10 +4,10 @@ require_once "KuruTemizlemeci.php";
 
 $mahmut = new KuruTemizlemeci;
 $mahmut->camasir = "aşorman";
-$mahmut->yika();
+$mahmut->temizle();
 
 $mahmut->camasir = "göynek";
-$mahmut->yika();
+$mahmut->temizle();
 
 $mahmut->camasir = "süveter";
-$mahmut->yika();
+$mahmut->temizle();

@@ -2,33 +2,49 @@
 
 class KuruTemizlemeci
 {
-	public $camasir;
+    protected $camasir;
 
-	public function temizle()
-	{
-		$this->yika();
-		$this->kurula();
-		$this->utule();
-		$this->paketle();
-	}
+    public function __construct()
+    {
+        echo "Kuru temizlemeciye hoş geldiniz<br>";
+    }
 
-	private function yika()
-	{
-		echo $this->camasir . " yıkandı<br>";
-	}
+    public function __destruct()
+    {
+        echo "Bizi tercih ettiğiniz için teşekkürler. Yine bekleriz<hr>";
+    }
 
-	private function kurula()
-	{
-		echo $this->camasir . " kurulandı<br>";
-	}
+    public function setCamasir($cmsr)
+    {
+        if( gettype($cmsr) != "string" ) throw new Exception("Çamaşır için gönderilen parametre doğru değere sahip değil. String değer bekleniyorken siz <b>". gettype($cmsr) . "</b> tipinde bir değer göndermişsiniz.<br>");
+        $this->camasir = $cmsr;
+    }
 
-	private function utule()
-	{
-		echo $this->camasir . " utulendi<br>";
-	}
+    public function temizle()
+    {
+        $this->yika();
+        $this->kurula();
+        $this->utule();
+        $this->paketle();
+    }
 
-	private function paketle()
-	{
-		echo $this->camasir . " paketlendi<br>";
-	}
+    private function yika()
+    {
+        echo $this->camasir . " yıkandı<br>";
+    }
+
+    private function kurula()
+    {
+        echo $this->camasir . " kurulandı<br>";
+    }
+
+    private function utule()
+    {
+        echo $this->camasir . " utulendi<br>";
+    }
+
+    private function paketle()
+    {
+        echo $this->camasir . " paketlendi<br>";
+    }
 }

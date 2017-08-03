@@ -1,13 +1,15 @@
 <?php
 
 require_once "KuruTemizlemeci.php";
+require_once "EveKuruTemizlemeci.php";
 
-$mahmut = new KuruTemizlemeci;
-$mahmut->camasir = "aşorman";
-// $mahmut->kurula(); // kurula() artık private olduğu için dışarıdan erişilemez
+try{
+	$mahmut = new EveKuruTemizlemeci;
+	// $mahmut->camasir = "aşorman";
+	// $mahmut->kurula(); // kurula() artık private olduğu için dışarıdan erişilemez
 
-$mahmut->camasir = "göynek";
-$mahmut->temizle();
-
-$mahmut->camasir = "süveter";
-$mahmut->temizle();
+	$mahmut->setCamasir("göynek");
+	$mahmut->temizle();
+} catch (Exception $e) {
+	echo $e->getMessage();
+}

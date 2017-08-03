@@ -1,7 +1,10 @@
 <?php
 
-require_once "KuruTemizlemeci.php";
-require_once "EveKuruTemizlemeci.php";
+function __autoload($className)
+{
+	echo($className . " sınıfı kullanılmak istendi, hemen getirelim<br>");
+	require_once $className.".php";
+}
 
 try{
 	$mahmut = new EveKuruTemizlemeci;

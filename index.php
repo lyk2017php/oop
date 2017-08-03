@@ -3,7 +3,7 @@
 function __autoload($className)
 {
 	echo($className . " sınıfı kullanılmak istendi, hemen getirelim<br>");
-	require_once $className.".php";
+	require_once "classes/".$className.".php";
 }
 
 try{
